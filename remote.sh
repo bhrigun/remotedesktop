@@ -1,6 +1,6 @@
 #!/bin/bash
 apt update
-tasksel install ubuntu-desktop
+#tasksel install ubuntu-desktop
 apt --reinstall install gnome-terminal
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
@@ -31,4 +31,33 @@ ResultInactive=yes
 ResultActive=yes
 EOF
 
-init 6
+cat <<EOF >/etc/gdm3/custom.conf
+# GDM configuration storage
+#
+# See /usr/share/gdm/gdm.schemas for a list of available options.
+
+[daemon]
+# Uncoment the line below to force the login screen to use Xorg
+#WaylandEnable=false
+
+# Enabling automatic login
+  AutomaticLoginEnable = true
+  AutomaticLogin = user1
+
+# Enabling timed login
+#  TimedLoginEnable = true
+#  TimedLogin = user1
+#  TimedLoginDelay = 10
+
+[security]
+
+[xdmcp]
+
+[chooser]
+
+[debug]
+# Uncomment the line below to turn on debugging
+# More verbose logs
+# Additionally lets the X server dump core if it crashes
+#Enable=true
+EOF
