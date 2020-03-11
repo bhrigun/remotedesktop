@@ -1,6 +1,6 @@
 #!/bin/bash
 apt update
-#tasksel install ubuntu-desktop
+###tasksel install ubuntu-desktop
 apt --reinstall install gnome-terminal
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
