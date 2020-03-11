@@ -30,3 +30,5 @@ ResultAny=yes
 ResultInactive=yes
 ResultActive=yes
 EOF
+
+init 6
