@@ -61,3 +61,7 @@ cat <<EOF >/etc/gdm3/custom.conf
 # Additionally lets the X server dump core if it crashes
 #Enable=true
 EOF
+
+su user1 -l -c "gsettings set org.gnome.desktop.screensaver lock-enabled false"
+# -l --login is crucial, it login as user1 and -c lets execute command 
+
