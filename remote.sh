@@ -64,4 +64,4 @@ EOF
 
 su user1 -l -c "gsettings set org.gnome.desktop.screensaver lock-enabled false"
 # -l --login is crucial, it login as user1 and -c lets execute command 
-
+apt install language-pack-ja libreoffice-help-ja gnome-user-docs-ja language-pack-gnome-ja thunderbird-locale-ja mozc-utils-gui firefox-locale-ja ibus-mozc fonts-noto-cjk-extra libreoffice-l10n-ja gnome-getting-started-docs-ja
