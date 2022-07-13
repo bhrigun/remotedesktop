@@ -38,3 +38,4 @@ su ubuntu -l -c "gsettings set org.gnome.shell.extensions.dash-to-dock click-act
 
 apt -y install language-pack-ja libreoffice-help-ja gnome-user-docs-ja language-pack-gnome-ja thunderbird-locale-ja mozc-utils-gui firefox-locale-ja ibus-mozc fonts-noto-cjk-extra libreoffice-l10n-ja gnome-getting-started-docs-ja hunspell-en-ca thunderbird-locale-en-us wbritish libreoffice-l10n-en-gb mythes-en-au language-pack-gnome-en libreoffice-help-en-us hyphen-en-gb hyphen-en-us hunspell-en-za mythes-en-us hyphen-en-ca hunspell-en-au libreoffice-help-en-gb language-pack-en hunspell-en-gb thunderbird-locale-en-gb firefox-locale-en libreoffice-l10n-en-za thunderbird-locale-en
 
+#tag prod-1.0
