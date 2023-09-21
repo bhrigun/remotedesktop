@@ -1,10 +1,8 @@
 #!/bin/bash
-apt update
-####tasksel install ubuntu-desktop
-apt --reinstall install gnome-terminal
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
-apt -y install  ./google-chrome-stable_current_amd64.deb ./chrome-remote-desktop_current_amd64.deb
+
+cat <<EOF >/etc/apt/apt.conf.d/10sandbox
+APT::Sandbox::User "root";
+EOF
 
 cat <<EOF >/etc/default/apport
 # set this to 0 to disable apport, or to 1 to enable it
@@ -30,3 +28,11 @@ ResultAny=yes
 ResultInactive=yes
 ResultActive=yes
 EOF
+
+apt update
+####tasksel install ubuntu-desktop
+apt --reinstall install gnome-terminal
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
+apt -y install  ./google-chrome-stable_current_amd64.deb ./chrome-remote-desktop_current_amd64.deb
+
