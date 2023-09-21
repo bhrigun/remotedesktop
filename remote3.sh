@@ -4,7 +4,7 @@ apt update
 apt --reinstall install gnome-terminal
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
-apt -y install  ~/google-chrome-stable_current_amd64.deb ~/chrome-remote-desktop_current_amd64.deb
+apt -y install  ./google-chrome-stable_current_amd64.deb ./chrome-remote-desktop_current_amd64.deb
 
 cat <<EOF >/etc/default/apport
 # set this to 0 to disable apport, or to 1 to enable it
